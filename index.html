@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pokoje gościnne Zielony Ogród w centrum Łeby, blisko plaży.">
+    <meta name="theme-color" content="#fcfdfb">
+    <title>Zielony Ogród | Pokoje w Łebie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+      <a class="brand" href="#start" aria-label="Zielony Ogród, strona główna">
+        <img class="brand-mark" src="assets/images/logo.png" width="56" height="56" alt="">
+        <span>
+          <strong data-bind="site.name">Zielony Ogród</strong>
+          <small data-bind="site.tagline">Pokoje gościnne w Łebie</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Otwórz menu" title="Otwórz menu">
+        <img class="menu-open" src="assets/icons/menu.svg" width="22" height="22" alt="">
+        <img class="menu-close" src="assets/icons/x.svg" width="22" height="22" alt="">
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Główna nawigacja">
+        <a href="#o-nas" data-nav-section="about">O nas</a>
+        <a href="#pokoje" data-nav-section="rooms">Pokoje</a>
+        <a href="#cennik" data-nav-section="pricing">Cennik</a>
+        <a href="#galeria" data-nav-section="gallery">Galeria</a>
+        <a href="#opinie" data-nav-section="reviews" hidden>Opinie</a>
+        <a href="#kontakt" data-nav-section="contact">Kontakt</a>
+      </nav>
+
+      <a class="header-phone" data-phone-link href="tel:+48609474272">
+        <img src="assets/icons/phone.svg" width="17" height="17" alt="">
+        <span data-bind="booking.phone">+48 609 474 272</span>
+      </a>
+    </header>
+
+    <main id="main">
+      <section id="start" class="hero" data-section="hero">
+        <div class="hero-visual">
+          <img class="hero-image" data-image="hero.image" src="assets/images/ogrod.jpg" alt="Ogród i wejście do obiektu Zielony Ogród w Łebie" width="1427" height="600" fetchpriority="high">
+          <div class="hero-shade" aria-hidden="true"></div>
+          <div class="hero-content">
+            <p class="eyebrow" data-bind="hero.eyebrow">Łeba · pokoje gościnne</p>
+            <h1 data-bind="hero.heading">Zielony Ogród</h1>
+            <p class="hero-lead" data-bind="hero.lead">Pokoje gościnne 600 metrów od plaży, z ogrodem i bezpłatnym parkingiem.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" data-phone-link href="tel:+48609474272" data-bind="booking.callToAction">Zapytaj o wolny termin</a>
+              <a class="button button-ghost" href="#pokoje">Zobacz pokoje</a>
+            </div>
+          </div>
+        </div>
+        <ul class="hero-facts" aria-label="Najważniejsze informacje">
+          <li><strong>600 m</strong><span>do plaży</span></li>
+          <li><strong>300 m</strong><span>do portu</span></li>
+          <li><strong>0 zł</strong><span>za parking</span></li>
+        </ul>
+      </section>
+
+      <section id="o-nas" class="intro section" data-section="about">
+        <div>
+          <p class="eyebrow">O miejscu</p>
+          <h2 data-bind="about.heading">Miejsce z oddechem</h2>
+        </div>
+        <div class="intro-copy">
+          <p data-bind="about.text">Zapraszamy do kameralnego domu gościnnego w centrum Łeby. Zieleń ogrodu daje wytchnienie, a plaża, port i najważniejsze atrakcje są w zasięgu krótkiego spaceru.</p>
+          <a class="text-link" href="#kontakt">Poznaj lokalizację <span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+
+      <section id="ogrod" class="garden section" data-section="garden" hidden>
+        <div class="section-heading">
+          <div><p class="eyebrow">Z bliska</p><h2 data-bind="garden.heading"></h2></div>
+          <p data-bind="garden.text"></p>
+        </div>
+        <div id="garden-images" class="garden-images"></div>
+      </section>
+
+      <section id="pokoje" class="rooms section" data-section="rooms">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Wygodny pobyt</p>
+            <h2 data-bind="rooms.heading">Pokoje i udogodnienia</h2>
+          </div>
+        </div>
+        <div class="room-layout">
+          <div id="room-photo" class="room-photo"></div>
+          <div id="amenity-groups" class="amenity-groups"></div>
+        </div>
+      </section>
+
+      <section id="cennik" class="pricing section" data-section="pricing">
+        <div class="pricing-copy">
+          <p class="eyebrow">Twój pobyt</p>
+          <h2 data-bind="pricing.heading">Cennik</h2>
+          <p data-bind="pricing.note">Cena zależy od terminu i długości pobytu. Zadzwoń, aby otrzymać dokładną ofertę.</p>
+          <div class="pricing-actions">
+            <a class="button button-light" data-phone-link href="tel:+48609474272">Zadzwoń i sprawdź termin</a>
+            <a class="text-link" data-link="booking.url" href="https://www.booking.com/hotel/pl/agra-zielony-ogrod.pl.html" target="_blank" rel="noopener noreferrer">Sprawdź na Booking.com</a>
+          </div>
+        </div>
+        <div id="price-list" class="price-list"></div>
+      </section>
+
+      <section id="galeria" class="gallery section" data-section="gallery">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Rozejrzyj się</p>
+            <h2 data-bind="gallery.heading">Galeria</h2>
+          </div>
+          <p data-bind="gallery.lead">Pokoje, ogród i przestrzeń wspólna.</p>
+        </div>
+        <div class="gallery-carousel" role="region" aria-roledescription="karuzela" aria-label="Zdjęcia obiektu">
+          <div id="gallery-track" class="gallery-track" tabindex="0" aria-label="Galeria zdjęć"></div>
+          <div class="gallery-toolbar">
+            <p id="gallery-caption" class="gallery-caption"></p>
+            <div class="gallery-controls">
+              <button id="gallery-prev" class="icon-button" type="button" aria-label="Poprzednie zdjęcie" title="Poprzednie zdjęcie" aria-controls="gallery-track"><img src="assets/icons/arrow-left.svg" width="20" height="20" alt=""></button>
+              <span id="gallery-counter" role="status" aria-live="polite" aria-atomic="true"></span>
+              <button id="gallery-next" class="icon-button" type="button" aria-label="Następne zdjęcie" title="Następne zdjęcie" aria-controls="gallery-track"><img src="assets/icons/arrow-right.svg" width="20" height="20" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="opinie" class="reviews-section" data-section="reviews" aria-labelledby="reviews-heading" hidden>
+        <div class="reviews-intro">
+          <p class="eyebrow">Wasze słowa</p>
+          <h2 id="reviews-heading" data-bind="reviews.heading"></h2>
+          <p id="reviews-summary" class="reviews-summary" hidden></p>
+          <a class="text-link" data-link="booking.url" href="https://www.booking.com/hotel/pl/agra-zielony-ogrod.pl.html" target="_blank" rel="noopener noreferrer">Zobacz opinie na Booking.com</a>
+        </div>
+        <div id="review-stage" class="review-stage" tabindex="0" role="group" aria-label="Opinie gości" aria-live="off" aria-atomic="true"></div>
+      </section>
+
+      <section id="kontakt" class="contact section" data-section="contact">
+        <div class="contact-content">
+          <div class="contact-details">
+            <p class="eyebrow">Kontakt i dojazd</p>
+            <h2 data-bind="contact.heading">Do zobaczenia w Łebie</h2>
+            <p data-bind="contact.text">Najłatwiej zarezerwujesz pobyt telefonicznie. Chętnie odpowiemy na pytania i pomożemy dobrać pokój.</p>
+            <a class="contact-phone" data-phone-link href="tel:+48609474272" data-bind="booking.phone">+48 609 474 272</a>
+            <p class="contact-hours" data-bind="contact.hours">Zapraszamy do kontaktu telefonicznego</p>
+          </div>
+          <div class="location-panel" data-section="location">
+            <p class="panel-label">Adres</p>
+            <address data-bind="location.address">ul. Wojska Polskiego 17<br>84-360 Łeba</address>
+            <ul id="distance-list" class="distance-list"></ul>
+            <a class="button button-dark" data-link="location.mapUrl" href="https://www.google.com/maps/dir/?api=1&amp;destination=54.762329%2C17.556752" target="_blank" rel="noopener noreferrer">Wyznacz trasę</a>
+          </div>
+        </div>
+        <div id="contact-photo" class="contact-photo" aria-hidden="true" hidden></div>
+      </section>
+      <section id="przelew" class="payment section" data-section="payment" hidden>
+        <div>
+          <p class="eyebrow">Rezerwacja bez pośpiechu</p>
+          <h2 data-bind="payment.heading"></h2>
+          <p data-bind="payment.note"></p>
+        </div>
+        <div class="payment-details">
+          <p class="panel-label" data-bind="payment.bank"></p>
+          <label for="bank-account">Numer rachunku</label>
+          <div class="account-row">
+            <input id="bank-account" readonly spellcheck="false" aria-describedby="copy-status">
+            <button id="copy-account" class="icon-button" type="button" title="Kopiuj numer rachunku" aria-label="Kopiuj numer rachunku"><img src="assets/icons/copy.svg" width="20" height="20" alt=""></button>
+          </div>
+          <dl class="bank-codes">
+            <div><dt>IBAN</dt><dd data-bind="payment.iban"></dd></div>
+            <div><dt>SWIFT / BIC</dt><dd data-bind="payment.swift"></dd></div>
+          </dl>
+          <p id="copy-status" class="copy-status" role="status"></p>
+        </div>
+      </section>
+
+      <section id="mapa" class="map-section" data-section="map" hidden>
+        <div class="section-heading map-heading">
+          <div><p class="eyebrow">Łeba, Wojska Polskiego 17</p><h2 data-bind="map.heading"></h2></div>
+          <a class="text-link" data-link="location.mapUrl" target="_blank" rel="noopener noreferrer">Wyznacz trasę <span aria-hidden="true">↗</span></a>
+        </div>
+        <div id="map-frame" class="map-frame">
+          <div id="map-consent" class="map-consent">
+            <p data-bind="location.addressInline"></p>
+            <button id="load-map" class="button button-dark" type="button">Pokaż mapę Google</button>
+            <small>Wczytanie mapy połączy Cię z Google i przekaże Twój adres IP. <a href="https://policies.google.com/privacy?hl=pl" target="_blank" rel="noopener noreferrer">Polityka prywatności Google</a></small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong data-bind="site.name">Zielony Ogród</strong>
+        <span data-bind="location.addressInline">ul. Wojska Polskiego 17, Łeba</span>
+      </div>
+      <div class="footer-links">
+        <a data-link="contact.facebookUrl" href="https://www.facebook.com/lebaagra/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="#start">Na górę ↑</a>
+      </div>
+      <small>© <span id="current-year"></span> <span data-bind="site.name">Zielony Ogród</span></small>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Podgląd zdjęcia">
+      <button class="lightbox-close" type="button" aria-label="Zamknij podgląd" title="Zamknij podgląd">
+        <img src="assets/icons/x.svg" width="22" height="22" alt="">
+      </button>
+      <img alt="">
+      <p></p>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+dist/
+.angular/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+.local-notes/
+references/
+backups/
+*.tar.gz
+*.zip

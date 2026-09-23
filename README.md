@@ -102,6 +102,24 @@ Before publishing, confirm that the owner approves the content and asset usage. 
 
 ## Maintenance and Deployment
 
+### Local prototype configuration
+
+`map`, `payment`, `garden`, and `reviews` are optional modules in `site.config.js`, each controlled by `enabled`. The Google map is loaded only after the visitor selects the map button; the directions link works independently. Payment details were transcribed from the legacy website and must be reconfirmed with the owner before publication.
+
+Reviews are supplied manually in `reviews.items`; there is no scraping or live Booking integration. Each item requires `text`, `source` (for example, `Booking.com`), and either numeric `score` with positive `maxScore`, or an integer `stars` from 1 to 5; `author` is optional. Numeric scores must be between zero and `maxScore` and take precedence over stars. Booking reviews retain their original ten-point scale.
+
+The five current quotes and the Booking aggregate of 8.3/10 from 54 reviews were supplied by the user on 2026-09-24, not independently fetched. `reviews.summary` stores `score`, `maxScore`, `count`, and `source`; update these manually as the external rating changes. This aggregate is independent of the five selected quotes. The garden description includes the owner's ceramics studio and ceramic decorations on the walls and among the plants.
+
+`reviews.intervalMs` is currently set to 5000 ms (the minimum and fallback remain 3000 ms), measured between transition starts. Reviews crossfade over 1.2 seconds, rotate automatically in random order without immediate repeats, and have no navigation buttons. Rotation pauses while hovered, keyboard-focused, off-screen, or in a background tab. The review text can receive keyboard focus to pause reading. A single review stays static; empty or invalid lists hide the section and its navigation link. Autoplay is disabled while reduced motion is preferred.
+
+Sections reveal once when scrolled into view. Reduced-motion preferences disable reveal animations. No external animation library is required. The implementation checklist is in `UPDATE-PLAN.md`.
+
+`rooms.image` defines the single room photograph using `src`, optional `mobileSrc`, and `alt`. `rooms.amenityGroups` contains headings and lists of amenities, displayed beside the photograph on desktop and below it on mobile.
+
+`gallery.images` defines the ordered slides using `src`, optional `mobileSrc`, `alt`, and `caption`. The native scroll-snap carousel supports touch swipes, previous/next buttons, arrow keys, Home/End, and a click-to-enlarge dialog. It does not autoplay. Empty galleries are hidden; duplicate source paths and photographs used in other enabled sections are excluded. Keep one canonical path per photograph, as differently named copies cannot be detected at runtime. The current gallery includes 15 unique photographs; its former ninth slide is now the contact section background.
+
+Room, contact, and gallery photographs use lazy loading and `<picture>` mobile sources at widths up to 700 px. `contact.image` uses `src`, optional `mobileSrc`, and `alt`; it fills the full-width contact section behind the content, with cover cropping and a 58% black overlay for white text. The background is decorative and hidden from assistive technology; section height follows its content. Gallery frames retain stable dimensions and show the full photograph, including portrait images. The larger image is selected above that breakpoint; the fullscreen dialog reuses the selected variant.
+
 The intended maintenance workflow is:
 
 1. Update the configuration and, when necessary, the referenced image files.
