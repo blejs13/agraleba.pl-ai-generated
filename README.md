@@ -100,11 +100,13 @@ The initial reference revision is `2f3438534261bab92362f4563f06a4db81814d8f`. Ke
 
 Before publishing, confirm that the owner approves the content and asset usage. Retain applicable licenses for third-party assets.
 
+Photo filenames use a category and a two-digit index: `pokoj-01.jpg`, `lazienka-01.jpg`, `ogrod-01.jpg`, `ceramika-01.jpg`, `altana-01.jpg`, or `wejscie-01.jpg`. Mobile variants keep the same filename in their mobile directory. Continue the numbering within each category; retain the established names for logos, icons, and the social preview.
+
 ## Maintenance and Deployment
 
 ### Local prototype configuration
 
-`map`, `payment`, `garden`, and `reviews` are optional modules in `site.config.js`, each controlled by `enabled`. The Google map is loaded only after the visitor selects the map button; the directions link works independently. Payment details were transcribed from the legacy website and must be reconfirmed with the owner before publication.
+`map`, `payment`, `garden`, and `reviews` are optional modules in `site.config.js`, each controlled by `enabled`. The Google map loads automatically when enabled, without a consent button; a privacy notice remains below it. This contacts Google and transmits the visitor's IP address on page load, so review privacy requirements before publication. The embed uses zoom 10 and center 54.735, 17.50 for a regional view of Leba and lakes Lebsko and Sarbsko while retaining the property marker. The directions link works independently. Payment details were transcribed from the legacy website and must be reconfirmed with the owner before publication.
 
 Reviews are supplied manually in `reviews.items`; there is no scraping or live Booking integration. Each item requires `text`, `source` (for example, `Booking.com`), and either numeric `score` with positive `maxScore`, or an integer `stars` from 1 to 5; `author` is optional. Numeric scores must be between zero and `maxScore` and take precedence over stars. Booking reviews retain their original ten-point scale.
 
@@ -116,9 +118,19 @@ Sections reveal once when scrolled into view. Reduced-motion preferences disable
 
 `rooms.image` defines the single room photograph using `src`, optional `mobileSrc`, and `alt`. `rooms.amenityGroups` contains headings and lists of amenities, displayed beside the photograph on desktop and below it on mobile.
 
-`gallery.images` defines the ordered slides using `src`, optional `mobileSrc`, `alt`, and `caption`. The native scroll-snap carousel supports touch swipes, previous/next buttons, arrow keys, Home/End, and a click-to-enlarge dialog. It does not autoplay. Empty galleries are hidden; duplicate source paths and photographs used in other enabled sections are excluded. Keep one canonical path per photograph, as differently named copies cannot be detected at runtime. The current gallery includes 15 unique photographs; its former ninth slide is now the contact section background.
+`gallery.images` defines the ordered slides using `src`, optional `mobileSrc`, `alt`, and `caption`. The native scroll-snap carousel supports touch swipes, previous/next buttons, arrow keys, Home/End, and a click-to-enlarge dialog. It does not autoplay. Empty galleries are hidden; duplicate source paths and photographs used in other enabled sections are excluded. Keep one canonical path per photograph, as differently named copies cannot be detected at runtime. The current gallery includes 29 unique photographs: 14 new property photographs followed by 15 legacy photographs. The former ninth legacy slide is now the contact section background.
 
-Room, contact, and gallery photographs use lazy loading and `<picture>` mobile sources at widths up to 700 px. `contact.image` uses `src`, optional `mobileSrc`, and `alt`; it fills the full-width contact section behind the content, with cover cropping and a 58% black overlay for white text. The background is decorative and hidden from assistive technology; section height follows its content. Gallery frames retain stable dimensions and show the full photograph, including portrait images. The larger image is selected above that breakpoint; the fullscreen dialog reuses the selected variant.
+Room, garden, contact, and gallery photographs use lazy loading and `<picture>` mobile sources at widths up to 700 px. `contact.image` uses `src`, optional `mobileSrc`, and `alt`; it fills the full-width contact section behind the content, with cover cropping and a 58% black overlay for white text. The background is decorative and hidden from assistive technology; section height follows its content. Gallery frames retain stable dimensions and show the full photograph, including portrait images. The larger image is selected above that breakpoint; the fullscreen dialog reuses the selected variant.
+
+The 16 photographs imported on 2026-09-24 live in `assets/images/{ogrod,ceramika}-NN.jpg`, with matching mobile copies in `assets/images/mobile/`. Progressive JPEGs have a maximum edge of 1800 px (desktop) or 900 px (mobile), are converted to sRGB, and have no EXIF metadata. Both sets together occupy about 9.2 MB instead of 131 MB of originals. The garden section uses `ogrod-09.jpg`, `ceramika-02.jpg`, and legacy photograph `ogrod-05.jpg` in that order, in portrait 2:3 frames. The second frame uses `object-position: 80% center` to keep the wall ceramics visible. The remaining 14 new photographs open the gallery. Original files were verified against a backup outside this repository before moving the import folder out; they are not deployment assets.
+
+### Search and sharing metadata
+
+The production URL is assumed to be `https://agraleba.pl/`. `index.html` contains a static title, description, canonical URL, Open Graph and Twitter Card metadata, favicon links, and `LodgingBusiness` JSON-LD. These are deliberately present without JavaScript so search and sharing crawlers can read them. When changing the property identity, phone, address, domain, or social links in configuration, also update the corresponding static metadata and HTML fallback content. Keep the canonical URL consistent with `robots.txt` and `sitemap.xml`.
+
+`favicon.ico` includes 16/32/48 px sizes; the PNG favicon is 48 px and the Apple touch icon is 180 px. All use the existing logo. `assets/images/social-preview.jpg` is a 1200 x 630 crop of the new property photograph. Booking ratings are not included in structured data. No prices, opening hours, or other unconfirmed facts are generated.
+
+Before publication, confirm the preferred host, redirect HTTP and alternate hosts to its HTTPS canonical URL, and review redirects from legacy Angular routes. Deploy `robots.txt`, `sitemap.xml`, `favicon.ico`, and the referenced image assets at their documented paths. Protect staging environments from indexing at the host level. After approved deployment, check the live page in Google Search Console and Rich Results Test and submit the sitemap. Local checks cannot confirm indexing, server responses, or social preview caches.
 
 The intended maintenance workflow is:
 

@@ -13,7 +13,7 @@ window.SITE_CONFIG = {
     eyebrow: "Łeba · pokoje gościnne",
     heading: "Zielony Ogród",
     lead: "Pokoje gościnne 600 metrów od plaży, z ogrodem i bezpłatnym parkingiem.",
-    image: "assets/images/ogrod.jpg"
+    image: "assets/images/ogrod-01.jpg"
   },
   about: {
     enabled: true,
@@ -25,17 +25,17 @@ window.SITE_CONFIG = {
     heading: "Ogród pełen ceramiki",
     text: "Pracownia ceramiczna właścicielki nadaje temu miejscu wyjątkowy charakter. Ceramika zdobi ściany i zakątki ogrodu.",
     images: [
-      { src: "assets/source/photos/(19).jpg", alt: "Drewniana ławka przy balustradzie z czerwonymi kwiatami", caption: "Chwila w słońcu" },
-      { src: "assets/source/photos/(22).jpg", alt: "Ręcznie malowana donica z kwiatami przed altaną Zielony Ogród", caption: "Kolor ma znaczenie" },
-      { src: "assets/source/photos/(20).jpg", alt: "Ozdoba z drewna wśród roślin i kwitnących krzewów ogrodu", caption: "Blisko zieleni" }
+      { src: "assets/images/ogrod-09.jpg", mobileSrc: "assets/images/mobile/ogrod-09.jpg", alt: "Ozdobne figury ptaków wśród kwiatów na tle balkonów", caption: "Ogrodowe rzeźby" },
+      { src: "assets/images/ceramika-02.jpg", mobileSrc: "assets/images/mobile/ceramika-02.jpg", alt: "Ceramiczna dekoracja z kwiatami na ścianie przy drzwiach pokojów", caption: "Ceramika na ścianach" },
+      { src: "assets/source/photos/ogrod-05.jpg", mobileSrc: "assets/source/mobile/photos/ogrod-05.jpg", alt: "Ozdoba z drewna wśród roślin i kwitnących krzewów ogrodu", caption: "Blisko zieleni" }
     ]
   },
   rooms: {
     enabled: true,
     heading: "Pokoje i udogodnienia",
     image: {
-      src: "assets/source/photos/(1).jpg",
-      mobileSrc: "assets/source/mobile/photos/(1).jpg",
+      src: "assets/source/photos/pokoj-01.jpg",
+      mobileSrc: "assets/source/mobile/photos/pokoj-01.jpg",
       alt: "Pokój gościnny z podwójnym łóżkiem, stolikiem i telewizorem"
     },
     amenityGroups: [
@@ -56,21 +56,35 @@ window.SITE_CONFIG = {
     heading: "Galeria",
     lead: "Pokoje, ogród i przestrzeń wspólna.",
     images: [
-      { src: "assets/source/photos/(2).jpg", mobileSrc: "assets/source/mobile/photos/(2).jpg", alt: "Pokój z podwójnym łóżkiem i stolikiem", caption: "Pokoje gościnne" },
-      { src: "assets/source/photos/(3).jpg", mobileSrc: "assets/source/mobile/photos/(3).jpg", alt: "Łazienka z kabiną prysznicową", caption: "Prywatna łazienka" },
-      { src: "assets/source/photos/(4).jpg", mobileSrc: "assets/source/mobile/photos/(4).jpg", alt: "Pokój z podwójnym łóżkiem i dodatkowym miejscem do spania", caption: "Pobyt z rodziną" },
-      { src: "assets/source/photos/(5).jpg", mobileSrc: "assets/source/mobile/photos/(5).jpg", alt: "Wnętrze pokoju gościnnego z łóżkami", caption: "Wnętrza pokojów" },
-      { src: "assets/source/photos/(6).jpg", mobileSrc: "assets/source/mobile/photos/(6).jpg", alt: "Jasne wnętrze pokoju gościnnego", caption: "Miejsce na odpoczynek" },
-      { src: "assets/source/photos/(7).jpg", mobileSrc: "assets/source/mobile/photos/(7).jpg", alt: "Pokój z łóżkiem, telewizorem i stolikiem", caption: "Wyposażenie pokoju" },
-      { src: "assets/source/photos/(8).jpg", mobileSrc: "assets/source/mobile/photos/(8).jpg", alt: "Pokój z okrągłym stolikiem i sofą", caption: "Chwila dla siebie" },
-      { src: "assets/source/photos/(9).jpg", mobileSrc: "assets/source/mobile/photos/(9).jpg", alt: "Łóżko i sofa przy oknie w pokoju gościnnym", caption: "Światło poranka" },
-      { src: "assets/source/photos/(13).jpg", mobileSrc: "assets/source/mobile/photos/(13).jpg", alt: "Wnętrze pokoju z drewnianymi meblami", caption: "Pokoje Zielonego Ogrodu" },
-      { src: "assets/source/photos/(14).jpg", mobileSrc: "assets/source/mobile/photos/(14).jpg", alt: "Wyposażenie pokoju gościnnego", caption: "Wygodny pobyt" },
-      { src: "assets/source/photos/(15).jpg", mobileSrc: "assets/source/mobile/photos/(15).jpg", alt: "Pokój z sofą i otwartymi drzwiami na zewnątrz", caption: "Ogród tuż za drzwiami" },
-      { src: "assets/source/photos/(16).jpg", mobileSrc: "assets/source/mobile/photos/(16).jpg", alt: "Dom gościnny otoczony zielenią i kwiatami", caption: "Zielony Ogród" },
-      { src: "assets/source/photos/(17).jpg", mobileSrc: "assets/source/mobile/photos/(17).jpg", alt: "Stoły i ławki w zadaszonej altanie", caption: "Wspólny czas w altanie" },
-      { src: "assets/source/photos/(18).jpg", mobileSrc: "assets/source/mobile/photos/(18).jpg", alt: "Wejście z szyldem Zielony Ogród", caption: "Zapraszamy do środka" },
-      { src: "assets/source/photos/(21).jpg", mobileSrc: "assets/source/mobile/photos/(21).jpg", alt: "Ogród przy domu gościnnym", caption: "Wśród zieleni" }
+      { src: "assets/images/ogrod-13.jpg", mobileSrc: "assets/images/mobile/ogrod-13.jpg", alt: "Dom gościnny i ścieżka w ogrodzie z kwitnącą lawendą", caption: "Dom wśród zieleni" },
+      { src: "assets/images/ceramika-03.jpg", mobileSrc: "assets/images/mobile/ceramika-03.jpg", alt: "Zbliżenie kolorowych ceramicznych kwiatów na elewacji", caption: "Ceramiczne kwiaty" },
+      { src: "assets/images/ogrod-07.jpg", mobileSrc: "assets/images/mobile/ogrod-07.jpg", alt: "Hamak w ogrodzie z widokiem na budynek i altanę", caption: "Odpoczynek w hamaku" },
+      { src: "assets/images/ceramika-06.jpg", mobileSrc: "assets/images/mobile/ceramika-06.jpg", alt: "Ceramiczne koty i ptaki na ścianie przy przejściu między budynkami", caption: "Mała galeria pod gołym niebem" },
+      { src: "assets/images/ogrod-12.jpg", mobileSrc: "assets/images/mobile/ogrod-12.jpg", alt: "Motyl z rozłożonymi skrzydłami na kwitnącej lawendzie", caption: "Lawendowy zakątek" },
+      { src: "assets/images/ceramika-04.jpg", mobileSrc: "assets/images/mobile/ceramika-04.jpg", alt: "Ceramiczne dekoracje na białej ścianie przy kamiennej ścieżce", caption: "Ceramika na ścianach" },
+      { src: "assets/images/ogrod-10.jpg", mobileSrc: "assets/images/mobile/ogrod-10.jpg", alt: "Budynek z balkonami otoczony krzewami i kamienną ścieżką", caption: "Zielony Ogród z bliska" },
+      { src: "assets/images/ceramika-08.jpg", mobileSrc: "assets/images/mobile/ceramika-08.jpg", alt: "Dwie zdobione ceramiczne kule wśród roślin przy ogrodowej ścieżce", caption: "Rękodzieło wśród zieleni" },
+      { src: "assets/images/ceramika-05.jpg", mobileSrc: "assets/images/mobile/ceramika-05.jpg", alt: "Ścieżka prowadząca do ogrodu wzdłuż ściany z ceramicznymi dekoracjami", caption: "Spacer wśród rękodzieła" },
+      { src: "assets/images/ogrod-11.jpg", mobileSrc: "assets/images/mobile/ogrod-11.jpg", alt: "Kwitnąca lawenda z motylem pośród kwiatów", caption: "Kolory lata" },
+      { src: "assets/images/ogrod-08.jpg", mobileSrc: "assets/images/mobile/ogrod-08.jpg", alt: "Zbliżenie ogrodowej figury ptaka na tle kwiatów", caption: "Ozdoby ogrodu" },
+      { src: "assets/images/ceramika-09.jpg", mobileSrc: "assets/images/mobile/ceramika-09.jpg", alt: "Ceramiczne kule i zieleń wzdłuż ścieżki przy altanie", caption: "Zielone ścieżki" },
+      { src: "assets/images/ceramika-07.jpg", mobileSrc: "assets/images/mobile/ceramika-07.jpg", alt: "Widok przejścia z ceramicznymi kotami na elewacji", caption: "Ceramika i architektura" },
+      { src: "assets/images/ogrod-14.jpg", mobileSrc: "assets/images/mobile/ogrod-14.jpg", alt: "Drewniana pergola porośnięta białymi kwiatami w ogrodzie", caption: "Chwila w ogrodzie" },
+      { src: "assets/source/photos/pokoj-02.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-02.jpg", alt: "Pokój z podwójnym łóżkiem i stolikiem", caption: "Pokoje gościnne" },
+      { src: "assets/source/photos/lazienka-01.jpg", mobileSrc: "assets/source/mobile/photos/lazienka-01.jpg", alt: "Łazienka z kabiną prysznicową", caption: "Prywatna łazienka" },
+      { src: "assets/source/photos/pokoj-03.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-03.jpg", alt: "Pokój z podwójnym łóżkiem i dodatkowym miejscem do spania", caption: "Pobyt z rodziną" },
+      { src: "assets/source/photos/pokoj-04.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-04.jpg", alt: "Wnętrze pokoju gościnnego z łóżkami", caption: "Wnętrza pokojów" },
+      { src: "assets/source/photos/pokoj-05.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-05.jpg", alt: "Jasne wnętrze pokoju gościnnego", caption: "Miejsce na odpoczynek" },
+      { src: "assets/source/photos/pokoj-06.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-06.jpg", alt: "Pokój z łóżkiem, telewizorem i stolikiem", caption: "Wyposażenie pokoju" },
+      { src: "assets/source/photos/pokoj-07.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-07.jpg", alt: "Pokój z okrągłym stolikiem i sofą", caption: "Chwila dla siebie" },
+      { src: "assets/source/photos/pokoj-08.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-08.jpg", alt: "Łóżko i sofa przy oknie w pokoju gościnnym", caption: "Światło poranka" },
+      { src: "assets/source/photos/pokoj-09.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-09.jpg", alt: "Wnętrze pokoju z drewnianymi meblami", caption: "Pokoje Zielonego Ogrodu" },
+      { src: "assets/source/photos/pokoj-10.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-10.jpg", alt: "Wyposażenie pokoju gościnnego", caption: "Wygodny pobyt" },
+      { src: "assets/source/photos/pokoj-11.jpg", mobileSrc: "assets/source/mobile/photos/pokoj-11.jpg", alt: "Pokój z sofą i otwartymi drzwiami na zewnątrz", caption: "Ogród tuż za drzwiami" },
+      { src: "assets/source/photos/ogrod-03.jpg", mobileSrc: "assets/source/mobile/photos/ogrod-03.jpg", alt: "Dom gościnny otoczony zielenią i kwiatami", caption: "Zielony Ogród" },
+      { src: "assets/source/photos/altana-01.jpg", mobileSrc: "assets/source/mobile/photos/altana-01.jpg", alt: "Stoły i ławki w zadaszonej altanie", caption: "Wspólny czas w altanie" },
+      { src: "assets/source/photos/wejscie-01.jpg", mobileSrc: "assets/source/mobile/photos/wejscie-01.jpg", alt: "Wejście z szyldem Zielony Ogród", caption: "Zapraszamy do środka" },
+      { src: "assets/source/photos/ogrod-06.jpg", mobileSrc: "assets/source/mobile/photos/ogrod-06.jpg", alt: "Ogród przy domu gościnnym", caption: "Wśród zieleni" }
     ]
   },
   location: {
@@ -105,7 +119,7 @@ window.SITE_CONFIG = {
   map: {
     enabled: true,
     heading: "Tutaj zaczyna się Twój odpoczynek",
-    embedUrl: "https://maps.google.com/maps?q=Agra%20Zielony%20Ogr%C3%B3d+(Zielony%20Ogr%C3%B3d)&ie=UTF8&t=&z=15&iwloc=B&output=embed"
+    embedUrl: "https://maps.google.com/maps?q=Agra%20Zielony%20Ogr%C3%B3d+(Zielony%20Ogr%C3%B3d)&ll=54.735,17.50&ie=UTF8&t=&z=11&iwloc=B&output=embed"
   },
   payment: {
     enabled: true,
@@ -121,8 +135,8 @@ window.SITE_CONFIG = {
     heading: "Do zobaczenia w Łebie",
     text: "Najłatwiej zarezerwujesz pobyt telefonicznie. Chętnie odpowiemy na pytania i pomożemy dobrać pokój.",
     image: {
-      src: "assets/source/photos/(12).jpg",
-      mobileSrc: "assets/source/mobile/photos/(12).jpg",
+      src: "assets/source/photos/ogrod-02.jpg",
+      mobileSrc: "assets/source/mobile/photos/ogrod-02.jpg",
       alt: "Widok na budynek, ogród, altanę i parking"
     },
     hours: "Zapraszamy do kontaktu telefonicznego",

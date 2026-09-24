@@ -56,15 +56,13 @@ function renderGarden() {
   }
   images.forEach((entry) => {
     const figure = document.createElement("figure");
-    const image = document.createElement("img");
-    image.src = entry.src;
-    image.alt = entry.alt;
+    const picture = createPicture(entry);
+    const image = picture.querySelector("img");
     image.width = 400;
     image.height = 600;
-    image.loading = "lazy";
     const caption = document.createElement("figcaption");
     caption.textContent = entry.caption;
-    figure.append(image, caption);
+    figure.append(picture, caption);
     document.querySelector("#garden-images").append(figure);
   });
 }
@@ -100,14 +98,12 @@ function setupMap() {
     return;
   }
   if (!config.map?.enabled) return;
-  document.querySelector("#load-map").addEventListener("click", () => {
-    const frame = document.createElement("iframe");
-    frame.title = "Mapa dojazdu do Zielonego Ogrodu w Łebie";
-    frame.src = url.href;
-    frame.referrerPolicy = "no-referrer-when-downgrade";
-    frame.allowFullscreen = true;
-    document.querySelector("#map-frame").replaceChildren(frame);
-  }, { once: true });
+  const frame = document.createElement("iframe");
+  frame.title = "Mapa Łeby i jezior Łebsko oraz Sarbsko z lokalizacją Zielonego Ogrodu";
+  frame.src = url.href;
+  frame.referrerPolicy = "no-referrer-when-downgrade";
+  frame.allowFullscreen = true;
+  document.querySelector("#map-frame").replaceChildren(frame);
 }
 
 function setupReveals() {
@@ -175,6 +171,12 @@ function setupReviews() {
       stars.className = "review-score";
       stars.textContent = `${formatScore(item.score)}/${formatScore(item.maxScore)}`;
       stars.setAttribute("aria-label", `Ocena ${formatScore(item.score)} na ${formatScore(item.maxScore)}`);
+      const icon = document.createElement("img");
+      icon.src = "assets/icons/star.svg";
+      icon.alt = "";
+      icon.width = 22;
+      icon.height = 22;
+      stars.prepend(icon);
     } else {
       stars.className = "review-stars";
       stars.setAttribute("role", "img");

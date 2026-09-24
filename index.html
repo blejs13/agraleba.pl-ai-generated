@@ -3,9 +3,59 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pokoje gościnne Zielony Ogród w centrum Łeby, blisko plaży.">
+    <meta name="description" content="Zielony Ogród w Łebie: pokoje gościnne 600 m od plaży, bezpłatny parking i ogród pełen ceramiki. Sprawdź zdjęcia i zapytaj telefonicznie o wolny termin.">
     <meta name="theme-color" content="#fcfdfb">
-    <title>Zielony Ogród | Pokoje w Łebie</title>
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <title>Zielony Ogród Łeba | Pokoje gościnne blisko plaży</title>
+    <link rel="canonical" href="https://agraleba.pl/">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon-48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" sizes="180x180">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:site_name" content="Zielony Ogród">
+    <meta property="og:title" content="Zielony Ogród Łeba | Pokoje gościnne blisko plaży">
+    <meta property="og:description" content="Pokoje gościnne 600 m od plaży, bezpłatny parking i ogród pełen ceramiki. Zobacz zdjęcia i zapytaj o wolny termin.">
+    <meta property="og:url" content="https://agraleba.pl/">
+    <meta property="og:image" content="https://agraleba.pl/assets/images/social-preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dom gościnny Zielony Ogród w Łebie otoczony zielenią i kwitnącą lawendą">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zielony Ogród Łeba | Pokoje gościnne blisko plaży">
+    <meta name="twitter:description" content="Pokoje gościnne 600 m od plaży, bezpłatny parking i ogród pełen ceramiki. Zobacz zdjęcia i zapytaj o wolny termin.">
+    <meta name="twitter:image" content="https://agraleba.pl/assets/images/social-preview.jpg">
+    <meta name="twitter:image:alt" content="Dom gościnny Zielony Ogród w Łebie otoczony zielenią i kwitnącą lawendą">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LodgingBusiness",
+        "@id": "https://agraleba.pl/#obiekt",
+        "name": "Zielony Ogród",
+        "url": "https://agraleba.pl/",
+        "description": "Pokoje gościnne w centrum Łeby, 600 metrów od plaży, z ogrodem pełnym ceramiki i bezpłatnym parkingiem.",
+        "telephone": "+48609474272",
+        "image": "https://agraleba.pl/assets/images/social-preview.jpg",
+        "logo": "https://agraleba.pl/assets/images/logo.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ul. Wojska Polskiego 17",
+          "addressLocality": "Łeba",
+          "postalCode": "84-360",
+          "addressCountry": "PL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 54.762329,
+          "longitude": 17.556752
+        },
+        "sameAs": [
+          "https://www.facebook.com/lebaagra/",
+          "https://www.booking.com/hotel/pl/agra-zielony-ogrod.pl.html"
+        ]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet">
@@ -47,7 +97,7 @@
     <main id="main">
       <section id="start" class="hero" data-section="hero">
         <div class="hero-visual">
-          <img class="hero-image" data-image="hero.image" src="assets/images/ogrod.jpg" alt="Ogród i wejście do obiektu Zielony Ogród w Łebie" width="1427" height="600" fetchpriority="high">
+          <img class="hero-image" data-image="hero.image" src="assets/images/ogrod-01.jpg" alt="Ogród i wejście do obiektu Zielony Ogród w Łebie" width="1427" height="600" fetchpriority="high">
           <div class="hero-shade" aria-hidden="true"></div>
           <div class="hero-content">
             <p class="eyebrow" data-bind="hero.eyebrow">Łeba · pokoje gościnne</p>
@@ -186,13 +236,8 @@
           <div><p class="eyebrow">Łeba, Wojska Polskiego 17</p><h2 data-bind="map.heading"></h2></div>
           <a class="text-link" data-link="location.mapUrl" target="_blank" rel="noopener noreferrer">Wyznacz trasę <span aria-hidden="true">↗</span></a>
         </div>
-        <div id="map-frame" class="map-frame">
-          <div id="map-consent" class="map-consent">
-            <p data-bind="location.addressInline"></p>
-            <button id="load-map" class="button button-dark" type="button">Pokaż mapę Google</button>
-            <small>Wczytanie mapy połączy Cię z Google i przekaże Twój adres IP. <a href="https://policies.google.com/privacy?hl=pl" target="_blank" rel="noopener noreferrer">Polityka prywatności Google</a></small>
-          </div>
-        </div>
+        <div id="map-frame" class="map-frame"></div>
+        <p class="map-privacy">Mapa jest wczytywana automatycznie z Google, co przekazuje Google Twój adres IP. <a href="https://policies.google.com/privacy?hl=pl" target="_blank" rel="noopener noreferrer">Polityka prywatności Google</a></p>
       </section>
     </main>
 
